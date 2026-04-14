@@ -1,13 +1,19 @@
 package github.britooo;
 
 public class InverterTextoStack {
-    public static String inverter(String input) {
-        /*
-            É óbvio que não precisamos de uma pilha para resolver esse
-            problema, porém, precisamos desenvolver nosso raciocínio lógico!
+        public static String inverter(String input) {
+            Pilha pilha = new Pilha(input.length());
+            for (int i = 0; i < input.length(); i++) {
+                pilha.push(input.split("")[i]);
+            }
 
-            Então, não fique pilhado, use a classe Pilha.
-        */
-        return null;
-    }
+            System.out.println(pilha.size());
+            StringBuilder stringBuilder = new StringBuilder();
+            var sizezao = pilha.size();
+            for (int i = 0; i < sizezao; i++) {
+                System.out.println(i);
+                stringBuilder.append(pilha.pop());
+            }
+            return stringBuilder.toString();
+        }
 }
